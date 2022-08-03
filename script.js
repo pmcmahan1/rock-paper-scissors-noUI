@@ -12,7 +12,9 @@ function getComputerChoice() {
 }
 
 // This function runs a single game of rock, paper, or scissors
-function playGame(userSelection, computerSelection) {
+function playRound(computerSelection) {
+    let userPrompt = prompt("Please input either rock, paper, or scissors");
+    userSelection = userPrompt.toLowerCase();
     if (computerSelection == userSelection) {
         return 'Tie!';
     }
@@ -30,22 +32,32 @@ function playGame(userSelection, computerSelection) {
     }
 }
 
+// This function plays a game of five rounds
+function game(playRound) {
+    for (let i = 0; i < 5; i++) {
+    playRound
+    }
+}
+
+
+
+
 
 
 // Assigning the computer's choice to a variable we can use
 computerSelection = getComputerChoice();
 
 // Prompting the user to type either rock, paper, or scissors
-let userPrompt = prompt("Please input either rock, paper, or scissors");
+//let userPrompt = prompt("Please input either rock, paper, or scissors");
 
 // Forces whatever user input into lower case
-let userSelection = userPrompt.toLowerCase();
+//let userSelection = userPrompt.toLowerCase();
 
 // Runs the game function from above
-playGame();
-
+// playRound();
+game(playRound);
 // Shows the computers selection in the console, to make sure everything is working
 console.log(computerSelection)
 
 //Displays the game results in the console
-console.log(playGame(userSelection, computerSelection));
+console.log(playRound(computerSelection));
